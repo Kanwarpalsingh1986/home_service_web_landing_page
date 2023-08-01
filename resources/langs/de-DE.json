@@ -1,0 +1,342 @@
+{
+
+  "================ Login ================" : "================ Login ================",
+
+
+  "Sign In" : "Sign In",
+  "Sign Up" : "Sign Up",
+  "Login" : "Login",
+  "Your Email" : "Your Email",
+  "Forgot Password?" : "Forgot Password?",
+  "Please enter password" : "Please enter password",
+  "Email or password is incorrect" : "Email or password is incorrect",
+  "Don’t have an Account ? ": "Don’t have an Account ? ",
+  "Already have an Account ? " : "Already have an Account ? ",
+
+
+  "================ Common ================" : "================ Common ================",
+
+  "Back" : "Back",
+  "About" : "About",
+  "Ok" : "Ok",
+  "Submit" : "Submit",
+  "loading..." : "loading...",
+  "OR" : "OR",
+  "There is some problem, Please try again later" : "There is some problem, Please try again later",
+  "Save" : "Save",
+  "Photo Library" : "Photo Library",
+  "Camera" : "Camera",
+
+  "================ Sign up ================" : "================ Sign up ================",
+
+  "SIGN UP" : "SIGN UP",
+  "Name" : "Name",
+  "Please enter name" : "Please enter name",
+  "Please enter password" : "Please enter password",
+  "Please enter confirm password" : "Please enter confirm password",
+  "Password does not matched" : "Password does not matched",
+
+
+  "================ Tabs  ================" : "================ Tabs ================",
+  "Home" : "Home",
+  "Favourite list" : "Favourite list",
+  "Bookings" : "Bookings",
+  "Chat" : "Chat",
+  "Profile" : "Profile",
+
+  "================ Category card  ================" : "================ Category card ================",
+
+  "sub title" : "sub title",
+
+  "================ Deal card  ================" : "================ Deal card ================",
+
+
+  "Valid till" : "Valid till",
+  "Delete photo" : "Delete photo",
+
+  "================ Notification tile  ================" : "================ Notification tile ================",
+
+  "Booking completed" : "Booking completed",
+  "Booking cancelled" : "Booking cancelled",
+  "New booking" : "New booking",
+  "Booking rejected" : "Booking rejected",
+  "Booking updated" : "Booking updated",
+
+
+  "================ Rounded password text field  ================" : "================ Rounded password text field ================",
+
+  "Password" : "Password",
+
+  "================ Time table  ================" : "================ Time table ================",
+
+  "Monday" : "Monday",
+  "Tuesday" : "Tuesday",
+  "Wednesday" : "Wednesday",
+  "Thursday" : "Thursday",
+  "Friday" : "Friday",
+  "Saturday" : "Saturday",
+  "Sunday" : "Sunday",
+
+
+
+  "================ New card  ================" : "================ New card ================",
+
+  "Pay by card" : "Pay by card",
+  "Number" : "Number",
+  "Expired Date" : "Expired Date",
+  "Pay" : "Pay",
+  "Order placed" : "Order placed",
+  "Order not placed" : "Order not placed",
+
+
+  "================ Payment srevices  ================" : "================ Payment srevices ================",
+
+
+  "Transaction successful" : "Transaction successful",
+  "Transaction failed" : "Transaction failed",
+  "Transaction failed: {error}}" : "Transaction failed: {error}}",
+  "Transaction cancelled" : "Transaction cancelled",
+  "Something went wrong" : "Something went wrong",
+
+
+  "================ Deals  ================" : "================ Deals ================",
+
+  "Deals" : "Deals",
+
+  "================ Businesses  ================" : "================ Businesses ================",
+
+  "Businesses" : "Businesses",
+
+  "================ Categories  ================" : "================ Categories ================",
+
+  "Categories" : "Categories",
+
+  "================ booking detail  ================" : "================ booking detail ================",
+
+  "Order Id : #Id" : "Order Id : #Id",
+  "Directions" : "Directions",
+  "Reschedule" : "Reschedule",
+  "Rebook" : "Rebook",
+  "Services" : "Services",
+  "Total" : "Total",
+  "Deal Total" : "Deal Total",
+  "Confirm" : "Confirm",
+  "Are you sure?" : "Are you sure?",
+  "Would you like to continue to cancel this booking?" : "Would you like to continue to cancel this booking?",
+  "Rate your booking" : "Rate your booking",
+  "Feedback is sent" : "Feedback is sent",
+  "Enter your feedback" : "Enter your feedback",
+
+  "================ Checkout  ================" : "================ Checkout ================",
+
+  "Choose payment method" : "Choose payment method",
+  "Credit card" : "Credit card",
+  "Apple Pay" : "Apple Pay",
+  "Paypal" : "Paypal",
+  "Razorpay" : "Razorpay",
+  "Cash" : "Cash",
+  "Credit card" : "Credit card",
+
+  "================ cancel booking  ================" : "================ cancel booking ================",
+
+  "You can\\'t cancel this appointment" : "You can\\'t cancel this appointment",
+  "This appointment cannot be canceled online, becuase you\\'re trying to cancel. within 1 hour of your appointment time." : "This appointment cannot be canceled online, becuase you\\'re trying to cancel. within 1 hour of your appointment time.",
+  "\\nYou can call {serviceProvider} directly to proceed" : "\\nYou can call {serviceProvider} directly to proceed",
+  "Close" : "Close",
+  "Call" : "Call",
+  "Cancel order" : "Cancel order",
+
+  "================ Fav  ================" : "================ Fav ================",
+
+  "Favourites" : "Favourites",
+
+  "================ my booking  ================" : "================ my booking ================",
+
+  "My Appointments" : "My Appointments",
+  "No upcoming appointments" : "No upcoming appointments",
+  "Have fun making some! Any booking you make will show up here" : "Have fun making some! Any booking you make will show up here",
+  "Find salons near you" : "Find salons near you",
+  "Upcoming" : "Upcoming",
+  "Past" : "Past",
+
+  "================ Chat  ================" : "================ Chat ================",
+
+  "January" : "January",
+  "February" : "February",
+  "March" : "March",
+  "April" : "April",
+  "May" : "May",
+  "June" : "June",
+  "July" : "July",
+  "August" : "August",
+  "September" : "September",
+  "October" : "October",
+  "November" : "November",
+  "December" : "December",
+
+  "Type in your message" : "Type in your message",
+  "No messages yet!" : "No messages yet!",
+  "Image from Gallery" : "Image from Gallery",
+  "Image from Camera" : "Image from Camera",
+  "No Chats yet!" : "No Chats yet!",
+  "Let\\'s chat with your friend" : "Let\\'s chat with your friend",
+
+  "================ dashboard  ================" : "================ dashboard ================",
+
+  "Category" : "Category nekjcbwejkc",
+  "Hello," : "Hello,",
+  "Search" : "Search",
+  "See All" : "See All",
+  "Deals near by" : "Deals near by",
+  "Near by" : "Near by",
+
+  "================ Deal Detail page  ================" : "================ Deal Detail page ================",
+
+  "Services provider" : "Services provider",
+  "Services Included" : "Services Included",
+  "Book" : "Book",
+
+  "================ Detail page  ================" : "================ Detail page ================",
+
+  "Specialist in" : "Specialist in",
+  "Reviews" : "Reviews",
+  "Book service" : "Book service",
+
+  "================ Map page  ================" : "================ Map page ================",
+
+  "Map" : "Map",
+
+  "================ Near by business page  ================" : "================ Near by business page ================",
+
+  "Location service is not enabled" : "Location service is not enabled",
+  "Location service access is not granted, Please grant access to your location" : "Location service access is not granted, Please grant access to your location",
+  "Not able to access your location, please try again later" : "Not able to access your location, please try again later",
+
+  "================ Preview order page ================" : "================ Preview order page ================",
+
+  "services" : "services",
+
+  "================ Reschedule booking page ================" : "================ Reschedule booking page ================",
+
+  "Would you like to continue to rescheudle this booking?" : "Would you like to continue to rescheudle this booking?",
+  "Booking is created" : "Booking is created",
+  "Reschedule booking" : "Reschedule booking",
+
+  "================ Reschedule booking page ================" : "================ Reschedule booking page ================",
+
+  "Searched services" : "Searched services",
+
+  "================ Sub categories page ================" : "================ Sub categories page ================",
+
+  "Sub categories" : "Sub categories",
+
+  "================ My Account page ================" : "================ My Account page ================",
+
+  "My Account" : "My Account",
+  "Notifications" : "Notifications",
+  "Change Password" : "Change Password",
+  "Transactions" : "Transactions",
+  "Help Center" : "Help Center",
+  "Log Out" : "Log Out",
+
+
+  "================ Change pwd page ================" : "================ Change pwd page ================",
+
+  "Old password" : "Old password",
+  "New password" : "New password",
+  "Confirm password" : "Confirm password",
+  "Password does not match" : "Password does not match",
+  "Password changed" : "Password changed",
+  "Password rules" : "Password rules",
+  "1. should contain at least one upper case\\n2. should contain at least one lower case\\n3. should contain at least one digit\\n4. should contain at least one Special character\\n.5 Must be at least 8 characters in length" : "1. should contain at least one upper case\\n2. should contain at least one lower case\\n3. should contain at least one digit\\n4. should contain at least one Special character\\n.5 Must be at least 8 characters in length",
+
+  "================ Forgot pwd page ================" : "================ Forgot pwd page ================",
+
+  "Reset password" : "Reset password",
+  "Please enter email" : "Please enter email",
+  "Please enter valid email address" : "Please enter valid email address",
+  "Email address" : "Email address",
+  "Reset password link is sent to you email address" : "Reset password link is sent to you email address",
+  "Email does not exists" : "Email does not exists",
+
+  "================ Notificatons page ================" : "================ Notificatons page ================",
+
+  "Keep updated" : "Keep updated",
+
+  "================ Update profile page ================" : "================ Update profile page ================",
+
+  "Update Profile" : "Update Profile",
+  "We care about your data so we\\'ll always keep it secure" : "We care about your data so we\\'ll always keep it secure",
+  "Phone number" : "Phone number",
+  "Update" : "Update",
+  "Profile is updated" : "Profile is updated",
+
+
+  "================ Profile page ================" : "================ Profile page ================",
+
+  "Go Premium" : "Go Premium",
+  "Restore in app purchases" : "Restore in app purchases",
+  "About us" : "About us",
+  "Contact us" : "Contact us",
+  "Privacy policy" : "Privacy policy",
+
+  "================ Rate user page ================" : "================ Rate user page ================",
+
+  "Hope you have received wonderfull service" : "Hope you have received wonderfull service",
+  "Enter review" : "Enter review",
+  "Rate" : "Rate",
+  "Report a bad service" : "Report a bad service",
+
+
+  "================ Categories page ================" : "================ Categories page ================",
+
+  "Categories" : "Categories",
+
+  "================ Add service page ================" : "================ Add service page ================",
+
+  "Service added successfully" : "Service added successfully",
+
+  "================ Add Staff page ================" : "================ Add Staff page ================",
+
+  "Staff added successfully" : "Staff added successfully",
+  "First name" : "First name",
+  "Last name" : "Last name",
+  "Mobile number" : "Mobile number",
+  "Enter staff detail" : "Enter staff detail",
+  "Preview staff detail" : "Preview staff detail",
+  "Select specializations" : "Select specializations",
+  "First name is empty" : "First name is empty",
+  "Last name is empty" : "Last name is empty",
+  "Phone number is empty" : "Phone number is empty",
+  "Upload image" : "Upload image",
+  "Add specialization" : "Add specialization",
+
+  "================ Book deal page ================" : "================ Book deal page ================",
+
+  "Step 1 of 2" : "Step 1 of 2",
+  "Step 2 of 2" : "Step 2 of 2",
+
+  "================ Create service page ================" : "================ Create service page ================",
+
+  "Step 1 of 3" : "Step 1 of 3",
+  "Step 2 of 3" : "Step 2 of 3",
+  "Step 3 of 3" : "Step 3 of 3",
+
+  "================ book service page ================" : "================ book service page ================",
+
+  "Step 1 of 6" : "Step 1 of 6",
+  "Step 2 of 6" : "Step 2 of 6",
+  "Step 3 of 6" : "Step 3 of 6",
+  "Step 4 of 6" : "Step 4 of 6",
+  "Step 5 of 6" : "Step 5 of 6",
+  "Step 6 of 6" : "Step 6 of 6",
+
+  "Select services" : "Select services",
+  "Book now" : "Book now",
+  "Skip" : "Skip",
+  "Select staff" : "Select staff",
+  "Select date and time" : "Select date and time",
+  "Add booking note" : "Add booking note",
+  "Review and confirm" : "Review and confirm",
+  "Include comments or requests about your booking" : "Include comments or requests about your booking"
+}
