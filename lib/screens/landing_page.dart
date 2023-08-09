@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:service_app/components/common_components.dart';
@@ -8,7 +10,11 @@ import 'package:service_app/extensions/number_extension.dart';
 import 'package:service_app/helper/app_config_constants.dart';
 import 'package:service_app/helper/localization_strings.dart';
 import 'package:service_app/helper/theme_icon.dart';
+import 'package:service_app/screens/testimonial_detail.dart';
 import 'package:service_app/universal_components/app_buttons.dart';
+import '../api/misc_controller.dart';
+import '../helper/responsive.dart';
+import '../model/testimonial_model.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({Key? key}) : super(key: key);
@@ -18,6 +24,14 @@ class LandingPage extends StatefulWidget {
 }
 
 class _LandingPageState extends State<LandingPage> {
+  final MiscController _miscController = Get.find();
+
+  @override
+  void initState() {
+    super.initState();
+    _miscController.getTestimonials();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,6 +54,9 @@ class _LandingPageState extends State<LandingPage> {
               verticalSpacer(height: 50),
               Container(
                   color: ColorConstants.backgroundColor, child: sixthPage()),
+              verticalSpacer(height: 50),
+              Container(
+                  color: ColorConstants.cardColor, child: testimonialsView()),
               CommonFooter(),
             ],
           ),
@@ -581,6 +598,84 @@ class _LandingPageState extends State<LandingPage> {
       color: ColorConstants.themeColor.withOpacity(0.5),
       height: 80,
     );
+  }
+
+  Widget testimonialsView() {
+    return Container(
+        height: Get.height,
+        child: Column(
+          children: [
+            verticalSpacer(height: 80),
+            Heading1Text(
+              testimonials.tr,
+              weight: TextWeight.bold,
+            ),
+            verticalSpacer(height: 50),
+            Expanded(
+              child: Obx(
+                () => GridView.builder(
+                    padding: EdgeInsets.only(
+                        left: DesignConstants.horizontalPadding,
+                        right: DesignConstants.horizontalPadding,
+                        top: 0,
+                        bottom: 20),
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisSpacing: 20,
+                        mainAxisSpacing: 20,
+                        childAspectRatio: 1,
+                        crossAxisCount:
+                            Responsive.isMobile(Get.context!) ? 1 : 4),
+                    itemCount: min(_miscController.testimonials.length, 4),
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemBuilder: (context, index) {
+                      TestimonialModel testimonial =
+                          _miscController.testimonials[index];
+                      return Column(
+                        children: [
+                          Expanded(
+                            child: CachedNetworkImage(
+                              imageUrl: _miscController.testimonials[index].image,
+                              fit: BoxFit.cover,
+                              // height: double.infinity,
+                              width: double.infinity,
+                            ).round(5),
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              verticalSpacer(height: 20),
+                              BodyLargeText(
+                                testimonial.title,
+                                maxLines: 1,
+                                weight: TextWeight.bold,
+                              ),
+                              verticalSpacer(height: 10),
+                              BodySmallText(
+                                testimonial.description,
+                                maxLines: 5,
+                                color: TextColor.grayscale700,
+                              ),
+                              verticalSpacer(height: 20),
+                              BodyLargeText(testimonial.name,
+                                  maxLines: 5, weight: TextWeight.bold),
+                              verticalSpacer(height: 10),
+                              BodyLargeText(
+                                '${testimonial.designation}, ${testimonial.company}',
+                                maxLines: 5,
+                                color: TextColor.grayscale700,
+                              ),
+                            ],
+                          ).hp(DesignConstants.horizontalPadding),
+                        ],
+                      ).ripple(() {
+                        Get.to(() => TestimonialDetail(
+                            testimonial: _miscController.testimonials[index]));
+                      });
+                    }),
+              ),
+            ),
+          ],
+        ));
   }
 }
 
