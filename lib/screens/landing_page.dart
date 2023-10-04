@@ -1,9 +1,8 @@
 import 'dart:math';
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:service_app/components/common_components.dart';
 import 'package:get/get.dart';
+import 'package:service_app/components/common_components.dart';
 import 'package:service_app/components/custom_texts.dart';
 import 'package:service_app/extensions/extension.dart';
 import 'package:service_app/extensions/number_extension.dart';
@@ -12,9 +11,11 @@ import 'package:service_app/helper/localization_strings.dart';
 import 'package:service_app/helper/theme_icon.dart';
 import 'package:service_app/screens/testimonial_detail.dart';
 import 'package:service_app/universal_components/app_buttons.dart';
-import '../api/misc_controller.dart';
-import '../helper/responsive.dart';
-import '../model/testimonial_model.dart';
+import 'package:service_app/api/misc_controller.dart';
+import 'package:service_app/helper/responsive.dart';
+import 'package:service_app/model/static_page_model.dart';
+import 'package:service_app/model/testimonial_model.dart';
+import 'htm_page_viewer.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({Key? key}) : super(key: key);
@@ -285,12 +286,12 @@ class _LandingPageState extends State<LandingPage> {
                     'assets/landingPage/1.png',
                     width: 180,
                   ).rotate(-25),
-                  Image.asset('assets/landingPage/1.png', width: 180)
+                  Image.asset('assets/landingPage/2.png', width: 180)
                       .rotate(25),
                 ],
               ),
               Image.asset(
-                'assets/landingPage/1.png',
+                'assets/landingPage/3.png',
                 width: 180,
               )
             ],
@@ -302,7 +303,7 @@ class _LandingPageState extends State<LandingPage> {
 
   Widget fourthPage() {
     return Container(
-      height: Get.height * 1.1,
+      height: Get.height * 1.3,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -406,7 +407,7 @@ class _LandingPageState extends State<LandingPage> {
                 aboutFeature,
                 weight: TextWeight.regular,
                 color: TextColor.grayscale700,
-                textAlign: TextAlign.center,
+                textAlign: TextAlign.start,
               )
             ],
           ).p25,
@@ -415,7 +416,7 @@ class _LandingPageState extends State<LandingPage> {
 
   Widget fifthPage() {
     return Container(
-      height: Get.height * 1.1,
+      height: Get.height * 1.2,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -435,21 +436,25 @@ class _LandingPageState extends State<LandingPage> {
             children: [
               Flexible(flex: 5, child: Image.asset('assets/landingPage/1.png')),
               const SizedBox(
-                width: 20,
+                width: 10,
               ),
-              Flexible(flex: 5, child: Image.asset('assets/landingPage/1.png')),
+              Flexible(flex: 5, child: Image.asset('assets/landingPage/2.png')),
               const SizedBox(
-                width: 20,
+                width: 10,
               ),
-              Flexible(flex: 5, child: Image.asset('assets/landingPage/1.png')),
+              Flexible(flex: 5, child: Image.asset('assets/landingPage/3.png')),
               const SizedBox(
-                width: 20,
+                width: 10,
               ),
-              Flexible(flex: 5, child: Image.asset('assets/landingPage/1.png')),
+              Flexible(flex: 5, child: Image.asset('assets/landingPage/4.png')),
               const SizedBox(
-                width: 20,
+                width: 10,
               ),
-              Flexible(flex: 5, child: Image.asset('assets/landingPage/1.png')),
+              Flexible(flex: 5, child: Image.asset('assets/landingPage/5.png')),
+              const SizedBox(
+                width: 10,
+              ),
+              Flexible(flex: 5, child: Image.asset('assets/landingPage/6.png')),
             ],
           )
         ],
@@ -459,7 +464,7 @@ class _LandingPageState extends State<LandingPage> {
 
   Widget sixthPage() {
     return Container(
-      height: Get.height,
+      height: Get.height * 0.9,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -602,7 +607,7 @@ class _LandingPageState extends State<LandingPage> {
 
   Widget testimonialsView() {
     return Container(
-        height: Get.height,
+        height: Get.height * 0.9,
         child: Column(
           children: [
             verticalSpacer(height: 80),
@@ -634,7 +639,8 @@ class _LandingPageState extends State<LandingPage> {
                         children: [
                           Expanded(
                             child: CachedNetworkImage(
-                              imageUrl: _miscController.testimonials[index].image,
+                              imageUrl:
+                                  _miscController.testimonials[index].image,
                               fit: BoxFit.cover,
                               // height: double.infinity,
                               width: double.infinity,
@@ -680,12 +686,14 @@ class _LandingPageState extends State<LandingPage> {
 }
 
 class CommonFooter extends StatelessWidget {
+  final MiscController miscController = Get.find();
+
   @override
   Widget build(BuildContext context) {
     return Container(
       color: ColorConstants.cardColor.darken().withOpacity(0.4),
       padding: EdgeInsets.symmetric(
-          vertical: DesignConstants.horizontalPadding * 4,
+          vertical: DesignConstants.horizontalPadding * 2,
           horizontal: DesignConstants.horizontalPadding * 4),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -726,19 +734,10 @@ class CommonFooter extends StatelessWidget {
                 children: [
                   NavItem(
                     title: quickLinks.tr,
-                    items: [
-                      aboutStr.tr,
-                      feedback.tr,
-                      testimonials.tr,
-                      becomeProvider.tr
-                    ],
+                    items: miscController.staticPages,
                   ),
                   const SizedBox(
                     width: 100,
-                  ),
-                  NavItem(
-                    title: legal.tr,
-                    items: [privacyPolicy.tr, termsOfService.tr],
                   ),
                 ],
               ),
@@ -759,9 +758,10 @@ class CommonFooter extends StatelessWidget {
 
 class NavItem extends StatelessWidget {
   final String title;
-  final List<String> items;
+  final List<StaticPageModel> items;
 
-  NavItem({required this.title, required this.items});
+  const NavItem({Key? key, required this.title, required this.items})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -772,15 +772,18 @@ class NavItem extends StatelessWidget {
           title,
           weight: TextWeight.bold,
         ),
-        SizedBox(height: 12),
+        const SizedBox(height: 12),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: items
               .map(
                 (item) => BodyMediumText(
-                  item,
+                  item.name,
                   weight: TextWeight.regular,
-                ).bP8,
+                ).bP8.ripple(() {
+                  Get.to(() => HTMLPageViewer(
+                      pageName: item.name, pageContent: item.content));
+                }),
               )
               .toList(),
         ),

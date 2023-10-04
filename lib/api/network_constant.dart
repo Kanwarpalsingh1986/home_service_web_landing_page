@@ -4,4 +4,6 @@ class NetworkConstantsUtil {
   static String baseUrl = AppConfigConstants.restApiBaseUrl;
 
   static String testimonials = '${baseUrl}testimonials/search?';
+  static String staticPages = '${baseUrl}pages/search';
+
 }

@@ -1,7 +1,4 @@
-import 'dart:typed_data';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:get/get.dart';
-import '../helper/localization_strings.dart';
+import '../model/static_page_model.dart';
 import '../model/testimonial_model.dart';
 import 'api_controller.dart';
 
@@ -23,6 +20,18 @@ class MiscApi {
           );
         } else {}
       }
+    });
+  }
+
+  static getStaticPages(
+      {required Function(List<StaticPageModel>) pagesCallback}) async {
+    await ApiWrapper()
+        .getApi(url: NetworkConstantsUtil.staticPages)
+        .then((response) async {
+      if (response?.success == true) {
+        List pages = response!.data['Page'];
+        pagesCallback(pages.map((e) => StaticPageModel.fromJson(e)).toList());
+      } else {}
     });
   }
 }

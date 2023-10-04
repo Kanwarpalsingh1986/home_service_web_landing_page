@@ -1,10 +1,6 @@
-import 'package:pinch_zoom/pinch_zoom.dart';
-import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
-import 'package:shimmer/shimmer.dart';
 import 'package:get/get.dart';
-
 import '../helper/app_config_constants.dart';
 
 double scale = (Get.height / 926);
@@ -333,15 +329,6 @@ extension BorderView on Widget {
           child: round(radius - 1));
 }
 
-extension ShimmerView on Widget {
-  Shimmer addShimmer(BuildContext context) => Shimmer.fromColors(
-        enabled: true,
-        baseColor: Theme.of(context).highlightColor.withOpacity(0.1),
-        highlightColor: Theme.of(context).highlightColor.withOpacity(0.2),
-        child: this,
-      );
-}
-
 extension OnPressed on Widget {
   Widget ripple(Function onPressed,
           {BorderRadiusGeometry borderRadius =
@@ -403,65 +390,9 @@ extension ColorExtension on Color {
   }
 }
 
-extension PulltoRefresh on Widget {
-  Widget addPullToRefresh({
-    required RefreshController refreshController,
-    required VoidCallback onRefresh,
-    required VoidCallback onLoading,
-  }) =>
-      SmartRefresher(
-        enablePullDown: false,
-        enablePullUp: true,
-        header: const WaterDropHeader(),
-        controller: refreshController,
-        onRefresh: onRefresh,
-        onLoading: onLoading,
-        child: this,
-      );
-}
-
 extension BackgroundContainer on Widget {
   Widget addBackground() =>
       Container(color: ColorConstants.cardColor, child: this.vP16).round(10);
-}
-
-extension PinchZoomImage on Widget {
-  Widget addPinchAndZoom() => PinchZoom(
-        resetDuration: const Duration(milliseconds: 100),
-        maxScale: 2.5,
-        onZoomStart: () {},
-        onZoomEnd: () {},
-        child: this,
-      );
-
-  Widget overlay() => Stack(
-        // fit: StackFit.expand,
-        children: [
-          this,
-          Container(
-            alignment: Alignment.topCenter,
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [Colors.transparent, Colors.black.withOpacity(0.7)],
-              ),
-            ),
-          ),
-
-          // Bottom Gradient Overlay
-          Container(
-            alignment: Alignment.bottomCenter,
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.bottomCenter,
-                end: Alignment.topCenter,
-                colors: [Colors.transparent, Colors.black.withOpacity(0.7)],
-              ),
-            ),
-          ),
-        ],
-      );
 }
 
 extension AppChip on Widget {

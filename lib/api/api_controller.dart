@@ -1,10 +1,5 @@
 import 'dart:convert';
-import 'dart:typed_data';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:http/http.dart' as http;
-import 'package:get/get.dart';
-import '../helper/localization_strings.dart';
-import 'network_constant.dart';
 export 'network_constant.dart';
 
 class ApiResponse {
@@ -45,12 +40,12 @@ class ApiWrapper {
   final JsonDecoder _decoder = new JsonDecoder();
 
   Future<ApiResponse?> getApi({required String url}) async {
+    print(url);
     return http.get(Uri.parse(url), headers: {
       "Content-type": "application/json"
     }).then((http.Response response) async {
       dynamic data = _decoder.convert(response.body);
-      // log(data.toString());
-
+      print(data);
       if (data['status'] == 401 && data['data'] == null) {
         // Get.offAll(() => AskForLogin());
       } else {

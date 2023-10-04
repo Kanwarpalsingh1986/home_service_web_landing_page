@@ -7,11 +7,9 @@ import 'package:service_app/helper/localization_strings.dart';
 import 'package:get/get.dart';
 import 'package:service_app/model/testimonial_model.dart';
 import '../../helper/app_config_constants.dart';
-import '../api/misc_controller.dart';
 
 class TestimonialDetail extends StatelessWidget {
   final TestimonialModel testimonial;
-  final MiscController _miscController = Get.find();
 
   TestimonialDetail({Key? key, required this.testimonial}) : super(key: key);
 
